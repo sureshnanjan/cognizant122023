@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34301.259
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CognizantSeleniumTraining", "CognizantSeleniumTraining\CognizantSeleniumTraining.csproj", "{0DA6C624-57E1-427E-A124-5CF2FB6136C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DA6C624-57E1-427E-A124-5CF2FB6136C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DA6C624-57E1-427E-A124-5CF2FB6136C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DA6C624-57E1-427E-A124-5CF2FB6136C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DA6C624-57E1-427E-A124-5CF2FB6136C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81A454EB-F7C1-4038-B7E3-4ADAAB59745F}
+	EndGlobalSection
+EndGlobal
