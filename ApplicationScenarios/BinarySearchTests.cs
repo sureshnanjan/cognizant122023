@@ -45,5 +45,20 @@ namespace ApplicationScenarios
             int actual = mysearcher.search();
             Assert.That(actual, Is.LessThan(0));
         }
+        //If value is not found and value is less than one or more elements in array,
+        //the negative number returned is the bitwise complement
+        //of the index of the first element that is larger than value.  
+        [Test]
+        public void BinarySearchReturnsNegativeAndElementLessThan()
+        {
+            /// Arrange
+            int[] inputs = { 1, 2, 3, 4, 6 };
+            int serchTerm = 5;
+            int expected = ~4;
+            BinarySearcher mysearcher = new BinarySearcher(inputs, serchTerm);
+            /// Assert // RED GREEN REFACTOR
+            int actual = mysearcher.search();
+            Assert.That(actual, Is.EqualTo(expected));
+        }
     }
 }
