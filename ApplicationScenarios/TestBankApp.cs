@@ -6,7 +6,9 @@ namespace ApplicationScenarios
     class TestBankApp
     {
 
-
+        /// <summary>
+        /// This is a test for doing func transerr
+        /// </summary>
         [Test]
         public void TransferFunds()
         {
