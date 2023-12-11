@@ -10,6 +10,9 @@ namespace ApplicationScenarios
         [Test]
         public void BinarySearchTakeSortedArray()
         {
+            // Behaviour Driven Development
+            // Gherkin -  English Like Statements 
+            // Given When Then
             /// Arrange
             int[] inputs = { 1, 2, 3, 4, 5 };
             int serchTerm = 5;
