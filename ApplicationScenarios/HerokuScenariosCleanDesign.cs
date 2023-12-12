@@ -40,6 +40,19 @@ namespace ApplicationScenarios
 
         }
 
+
+        [Test]
+        public void Navigatingtopage()
+        {
+            // AAA
+            IHomePageOperations page = new HomePage();
+            // Act
+            string navigatingPage = page.goToExample("Add/Remove Elements");
+            //Assert
+            Assert.That(navigatingPage, Is.EqualTo("Add/Remove Elements"));
+
+        }
+
         [Test]
         public void HerokuAppAddingOneElementWorks() {
             IAddRemoveElements page = null;
