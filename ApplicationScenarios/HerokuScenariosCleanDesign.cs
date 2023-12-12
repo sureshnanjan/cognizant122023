@@ -41,17 +41,54 @@ namespace ApplicationScenarios
         }
 
         [Test]
+        public void HomePageForkmeDetails()
+        {
+            // AAA
+            IHomePageOperations page = new HomePage();
+            // Act
+            string ForkmeDetails = page.getForkmeDetails();
+            Assert.That(ForkmeDetails, Is.EqualTo("Fork me on GitHub"));
+
+        }
+
+        [Test]
+        public void HomePagegoToExample()
+        {
+            // AAA
+            IHomePageOperations page = new HomePage();
+            // Act
+            string toexp = "A/B Testing";
+            string toExample = page.goToExample(toexp);
+            Assert.That("a", Is.EqualTo(toExample));
+
+        }
+
+
+        [Test]
+        public void AddRemoveHasCorrectHeadingText()
+        {
+            // AAA
+            IAddRemoveElements page = new AddRemoveElementsPage();
+           // Act
+            string headingString = page.getHeading();
+            Assert.That(headingString, Is.EqualTo("Add/Remove Elements"));
+            page.exitApplication();
+
+        }
+
+        [Test]
         public void HerokuAppAddingOneElementWorks() {
-            IAddRemoveElements page = null;
+            IAddRemoveElements page = new AddRemoveElementsPage();
             page.addElement();
             int addedElements = page.getAddedElemenstCount();
             Assert.That(addedElements, Is.EqualTo(1));
+            page.exitApplication();
         }
 
         [Test]
         public void HerokuAppAddingFiveElementWorks()
         {
-            IAddRemoveElements page = null;
+            IAddRemoveElements page = new AddRemoveElementsPage(); 
             for (int i = 0; i < 5; i++)
             {
                 page.addElement();
@@ -59,5 +96,7 @@ namespace ApplicationScenarios
             int addedElements = page.getAddedElemenstCount();
             Assert.That(addedElements, Is.EqualTo(5));
         }
+
+
     }
 }

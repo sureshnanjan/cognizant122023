@@ -14,5 +14,7 @@ namespace HerokuAppOperations
         void removeElement();
 
         int getAddedElemenstCount();
+
+        void exitApplication();
     }
 }

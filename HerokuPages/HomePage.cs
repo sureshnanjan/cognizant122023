@@ -14,6 +14,7 @@ namespace HerokuPages
         private string _url = "https://the-internet.herokuapp.com/";
         private By headingLocator = By.TagName("h1");
         private By subHeadingLocator = By.TagName("h2");
+              
 
         public HomePage()
         {
@@ -23,12 +24,13 @@ namespace HerokuPages
         
         public int getExamplesCount()
         {
-            throw new NotImplementedException();
+            return _browser.FindElements(By.XPath("//*[@id='content']/ul/li")).Count;
         }
 
         public string getForkmeDetails()
         {
-            throw new NotImplementedException();
+            IWebElement forkme = _browser.FindElement(By.XPath("/html/body/div[2]/a/img"));
+            return forkme.GetAttribute("alt");
         }
 
         public string getHeading()
@@ -40,10 +42,11 @@ namespace HerokuPages
         {
             return _browser.FindElement(subHeadingLocator).Text;
         }
-
-        public void goToExample(string exampleName)
+       
+        public string goToExample(string exampleName)
         {
-            throw new NotImplementedException();
+            return _browser.FindElement(By.LinkText(exampleName)).TagName;
+        
         }
 
         private void CloseBrowser() {

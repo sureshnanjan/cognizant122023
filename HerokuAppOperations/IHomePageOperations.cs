@@ -10,7 +10,7 @@ namespace HerokuAppOperations
     {
         string getHeading();
         string getSubHeading();
-        void goToExample(string exampleName);
+        string goToExample(string exampleName);
 
         int getExamplesCount();
         string getForkmeDetails();
