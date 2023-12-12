@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ISortedDataTables.cs" />
+    <Compile Include="IBrokenImages.cs" />
     <Compile Include="IAddRemoveElements.cs" />
     <Compile Include="IHomePageOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
