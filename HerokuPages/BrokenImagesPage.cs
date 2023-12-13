@@ -1,47 +1,40 @@
 ﻿using HerokuAppOperations;
-using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace HerokuPages
 {
-    public class AddRemoveElementsPage : IAddRemoveElements
+    public class BrokenImagesPage : IBrokenImages
     {
         private IWebDriver _browser;
-        private string _url = "https://the-internet.herokuapp.com/add_remove_elements/";
+        private string _url = "https://the-internet.herokuapp.com/broken_images";
         private By headingLocator = By.TagName("h3");
 
 
-        public AddRemoveElementsPage()
+        public BrokenImagesPage()
         {
             _browser = new ChromeDriver();
             _browser.Navigate().GoToUrl(_url);
         }
 
-        public string getHeading()
-        {
-            return _browser.FindElement(headingLocator).Text;
-        }
-
-        public void addElement()
+        public void uploadImage()
         {
             throw new NotImplementedException();
         }
 
-        public void removeElement()
+        public void removeImage()
+        {
+            throw new NotImplementedException();
+        }
+        public int getUploadedImagesCount()
         {
             throw new NotImplementedException();
         }
 
-        public int getAddedElementsCount()
-        {
-            throw new NotImplementedException();
-        }
     }
-
 }

@@ -23,12 +23,13 @@ namespace HerokuPages
         
         public int getExamplesCount()
         {
-            throw new NotImplementedException();
+            return _browser.FindElements(By.XPath("//*[@id='content']/ul/li")).Count;
         }
 
         public string getForkmeDetails()
         {
-            throw new NotImplementedException();
+            IWebElement altTextImage = _browser.FindElement(By.XPath("/html/body/div[2]/a/img"));
+            return altTextImage.GetAttribute("alt");
         }
 
         public string getHeading()
