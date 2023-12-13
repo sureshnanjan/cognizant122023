@@ -22,16 +22,21 @@ namespace HerokuPages
             _browser.Navigate().GoToUrl(_url);
         }
 
-        public void uploadImage()
+       public string getHeading()
         {
             throw new NotImplementedException();
         }
 
-        public void removeImage()
+        public bool isImageValid()
         {
             throw new NotImplementedException();
         }
-        public int getUploadedImagesCount()
+        public int getBrokenImagesCount()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int getTotalImagesCount()
         {
             throw new NotImplementedException();
         }

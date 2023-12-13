@@ -53,6 +53,10 @@
   <ItemGroup>
     <Compile Include="AddRemoveElementsPage.cs" />
     <Compile Include="BrokenImagesPage.cs" />
+    <Compile Include="TyposPage.cs" />
+    <Compile Include="StatusCodesPage.cs" />
+    <Compile Include="SecureFileDownloadPage.cs" />
+    <Compile Include="RedirectLinkPage.cs" />
     <Compile Include="SortedDataTablesPage.cs" />
     <Compile Include="HomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -46,5 +46,11 @@ namespace ApplicationScenarios
 
 
         }
+
+        [Test]
+        public void CheckShadowDOM() { }
+
+        [Test]
+        public void VerifyShiftingContent() { }
     }
 }

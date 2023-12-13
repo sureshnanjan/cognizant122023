@@ -8,10 +8,12 @@ namespace HerokuAppOperations
 {
     public interface IBrokenImages
     {
-        void uploadImage();
+        string getHeading();
 
-        void removeImage();
+        bool isImageValid();
 
-        int getUploadedImagesCount();
+        int getBrokenImagesCount();
+
+        int getTotalImagesCount();
     }
 }
