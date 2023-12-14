@@ -14,7 +14,7 @@ namespace ApplicationScenarios
             // Act
             int nofoExamples = page.getExamplesCount();
             Assert.That(nofoExamples, Is.EqualTo(44));
-        
+            page.exitApplication();
         }
 
         [Test]
@@ -37,7 +37,18 @@ namespace ApplicationScenarios
             // Act
             string subHeading = page.getSubHeading();
             Assert.That(subHeading, Is.EqualTo("Available Examples"));
+            page.exitApplication();
+        }
 
+        [Test]
+        public void HomePageClickforkMedetails()
+        {
+            // AAA
+            IHomePageOperations page = new HomePage();
+            // Act
+            string forkMeDetails = page.getForkmeDetails();
+            Assert.That(forkMeDetails, Is.EqualTo("https://github.com/saucelabs/the-internet"));
+            page.exitApplication();
         }
 
         [Test]
@@ -46,6 +57,7 @@ namespace ApplicationScenarios
             page.addElement();
             int addedElements = page.getAddedElemenstCount();
             Assert.That(addedElements, Is.EqualTo(1));
+            page.exitApplication();
         }
 
         [Test]

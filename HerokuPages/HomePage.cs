@@ -14,6 +14,8 @@ namespace HerokuPages
         private string _url = "https://the-internet.herokuapp.com/";
         private By headingLocator = By.TagName("h1");
         private By subHeadingLocator = By.TagName("h2");
+        private string _strClassnameForDeleteButton = "added-manually";
+        private string _strGetTheLinksByElements = "//*[@id='content']/ul/li";
 
         public HomePage()
         {
@@ -23,12 +25,16 @@ namespace HerokuPages
         
         public int getExamplesCount()
         {
-            throw new NotImplementedException();
+            return _browser.FindElements(By.XPath(_strGetTheLinksByElements)).Count;
         }
 
         public string getForkmeDetails()
         {
-            throw new NotImplementedException();
+            _browser.FindElement(By.CssSelector("Fork me on GitHub")).Click();
+            //div.row:nth - child(2) > img:nth - child(2)
+                /// html / body / div[2] / img
+            //_browser.Navigate().GoToUrl("https://the-internet.herokuapp.com/");
+            return _browser.Url.ToString();
         }
 
         public string getHeading()
