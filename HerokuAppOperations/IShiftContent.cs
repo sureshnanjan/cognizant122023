@@ -6,34 +6,63 @@ using System.Threading.Tasks;
 
 namespace HerokuAppOperations
 {
-    //This interface is created to validate the shift content.
+    ///<summery>
+    ///This interface is created to validate the shift content.
+    ///</summery>
     interface IShiftContent
     {
-        //This is to check Menu item page is opened
+        ///<summery>
+        ///This is to check Menu item page is opened
+        ///</summery>
+        ///<returns></returns>
         string getMenuItem();
 
-        //This is to check Image item page is opened
+        ///<summery>
+        ///This is to check Image item page is opened
+        ///</summery>
+        ///<returns></returns>
         string getImageItem();
 
-        //This is to check List item page is opened
+        ///<summery>
+        ///This is to check List item page is opened
+        ///</summery>
+        ///<returns></returns>
         string getListpage();
 
-        //This is to check Menu loaded randomly or not
+        ///<summery>
+        ///This is to check Menu loaded randomly or not
+        ///</summery>
+        ///<returns></returns>
         string loadMenuRandom();
 
-        //This is to check Menu shifted or not
+        ///<summery>
+        ///This is to check Menu shifted or not
+        ///</summery>
+        ///<returns></returns>
         string shiftMenuPixel();
 
-        //This is to check Menu loaded randomly and shifted or not
+        ///<summery>
+        ///This is to check Menu loaded randomly and shifted or not
+        ///</summery>
+        ///<returns></returns>
         string loadMenuRandomAndShift();
 
-        //This is to check Image loaded randomly or not
+        ///<summery>
+        ///This is to check Image loaded randomly or not
+        ///</summery>
+        ///<returns></returns>
         string loadImageRandom();
 
-        //This is to check Image shifted or not
+        ///<summery>
+        ///This is to check Image shifted or not
+        ///</summery>
+        ///<returns></returns>
         string shiftImagePixel();
 
-        //This is to check Image loaded randomly and shifted or not
+        ///<summery>
+        ///This is to check Image loaded randomly and shifted or not
+        ///</summery>
+        ///<returns></returns>
         string loadImageRandomAndShift();
     }
 }
