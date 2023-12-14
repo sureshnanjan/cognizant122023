@@ -13,15 +13,27 @@ namespace HerokuAppOperations
     public interface ICheckboxCheckUncheck
     {
         ///<summery>
-        ///This method is to check the first check box status
+        ///This method is to check the first check box checked
         ///</summery>
         ///<returns></returns>
         bool isBox1Checked();
 
         ///<summery>
-        ///This method is to check the second check box status
+        ///This method is to check the second check box checked
         ///</summery>
         ///<returns></returns>
-        bool isBox2Checked();        
+        bool isBox2Checked();
+
+        ///<summery>
+        ///This method is to check the fisrt check box unchecked
+        ///</summery>
+        ///<returns></returns>
+        bool isBox1Unchecked();
+
+        ///<summery>
+        ///This method is to check the second check box unchecked
+        ///</summery>
+        ///<returns>returns the check box status</returns>
+        bool isBox2Unchecked();
     }
 }
