@@ -34,6 +34,7 @@ namespace CognizantSeleniumTraining
             mycamera.GetScreenshot();
             IJavaScriptExecutor myscrriptengine = broswer as IJavaScriptExecutor;
             myscrriptengine.ExecuteScript("alert('This Message')");
+            OpenBrowser(BrowserTypes.chrome);
             broswer.Quit();
             
 
@@ -43,6 +44,14 @@ namespace CognizantSeleniumTraining
             
             
 
+        }
+
+        public static void OpenBrowser(BrowserTypes brtype) {
+            switch (brtype)
+            {
+                case BrowserTypes.chrome: break;
+                case BrowserTypes.edge: break;
+            }
         }
     }
 }

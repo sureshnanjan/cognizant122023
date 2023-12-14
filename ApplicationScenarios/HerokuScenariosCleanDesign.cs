@@ -7,8 +7,12 @@ namespace ApplicationScenarios
     [TestFixture]
     class HerokuScenariosCleanDesign
     {
+        private int myvar;
         [Test]
         public void HomePageHas44Examples() {
+
+            int unused = 0;
+            this.myvar = 100;
             // AAA
             IHomePageOperations page = new HomePage();
             // Act
@@ -20,6 +24,7 @@ namespace ApplicationScenarios
         [Test]
         public void HomePageHasCorrectHeadingText()
         {
+            
             // AAA
             IHomePageOperations page = new HomePage();
             // Act
