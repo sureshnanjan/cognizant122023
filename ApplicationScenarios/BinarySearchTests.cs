@@ -13,25 +13,25 @@ namespace ApplicationScenarios
             // Behaviour Driven Development
             // Gherkin -  English Like Statements 
             // Given When Then
-            /// Arrange
+            // Arrange
             int[] inputs = { 1, 2, 3, 4, 5 };
             int serchTerm = 5;
-            /// Aact
+            // Aact
             BinarySearcher mysearcher = new BinarySearcher(inputs, serchTerm);
-            /// Assert // RED GREEN REFACTOR
-            /// 
+            // Assert // RED GREEN REFACTOR
+            //
             Assert.That(mysearcher, Is.InstanceOf<BinarySearcher>());
         }
 
         [Test]
         public void BinarySearchReturnsIndexofExistingItem()
         {
-            /// Arrange
+            // Arrange
             int[] inputs = { 1, 2, 3, 4, 5 };
             int serchTerm = 5;
             int expected = 4;
             BinarySearcher mysearcher = new BinarySearcher(inputs, serchTerm);
-            /// Assert // RED GREEN REFACTOR
+            // Assert // RED GREEN REFACTOR
             int actual = mysearcher.search();
             Assert.That(actual, Is.EqualTo(expected));
         }
@@ -39,12 +39,12 @@ namespace ApplicationScenarios
         [Test]
         public void BinarySearchReturnsNegativeIfItemNotExists()
         {
-            /// Arrange
+            // Arrange
             int[] inputs = { 1, 2, 3, 4, 5 };
             int serchTerm = 10;
             //int expected = -1;
             BinarySearcher mysearcher = new BinarySearcher(inputs, serchTerm);
-            /// Assert // RED GREEN REFACTOR
+            // Assert // RED GREEN REFACTOR
             int actual = mysearcher.search();
             Assert.That(actual, Is.LessThan(0));
         }
