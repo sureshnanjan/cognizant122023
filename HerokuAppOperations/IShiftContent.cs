@@ -12,57 +12,57 @@ namespace HerokuAppOperations
     interface IShiftContent
     {
         ///<summery>
-        ///This is to check Menu item page is opened
+        ///This method is to check Menu item page is opened
         ///</summery>
-        ///<returns></returns>
+        ///<returns>returns the menu page header to check the menu page opened or not</returns>
         string getMenuItem();
 
         ///<summery>
-        ///This is to check Image item page is opened
+        ///This method is to check Image item page is opened
         ///</summery>
-        ///<returns></returns>
+        ///<returns>returns the image page header to check the page opened or not</returns>
         string getImageItem();
 
         ///<summery>
-        ///This is to check List item page is opened
+        ///This method is to check List item page is opened
         ///</summery>
-        ///<returns></returns>
+        ///<returns>returns the List page header to check the page opened or not</returns>
         string getListpage();
 
         ///<summery>
-        ///This is to check Menu loaded randomly or not
+        ///This method is to check Menu loaded randomly or not
         ///</summery>
-        ///<returns></returns>
+        ///<returns>returns the position of the menu to check menu loaded randomly or not</returns>
         string loadMenuRandom();
 
         ///<summery>
-        ///This is to check Menu shifted or not
+        ///This method is to check Menu shifted or not
         ///</summery>
-        ///<returns></returns>
+        ///<returns>returns the position of the menu to check menu shifted pixel or not</returns>
         string shiftMenuPixel();
 
         ///<summery>
-        ///This is to check Menu loaded randomly and shifted or not
+        ///This method is to check Menu loaded randomly and shifted or not
         ///</summery>
-        ///<returns></returns>
+        ///<returns>returns the position of the menu to check menu loaded randomly and shifted pixel or not</returns>
         string loadMenuRandomAndShift();
 
         ///<summery>
-        ///This is to check Image loaded randomly or not
+        ///This method is to check Image loaded randomly or not
         ///</summery>
-        ///<returns></returns>
+        ///<returns>returns the position of the Image to check image loaded randomly or not</returns>
         string loadImageRandom();
 
         ///<summery>
-        ///This is to check Image shifted or not
+        ///This method is to check Image shifted or not
         ///</summery>
-        ///<returns></returns>
+        ///<returns>returns the position of the Image to check Image shifted pixel or not</returns>
         string shiftImagePixel();
 
         ///<summery>
-        ///This is to check Image loaded randomly and shifted or not
+        ///This method is to check Image loaded randomly and shifted or not
         ///</summery>
-        ///<returns></returns>
+        ///<returns>returns the position of the Image to check Image loaded randomly and shifted pixel or not</returns>
         string loadImageRandomAndShift();
     }
 }
