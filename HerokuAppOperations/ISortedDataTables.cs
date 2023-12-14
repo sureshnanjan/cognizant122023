@@ -32,6 +32,14 @@ namespace HerokuAppOperations
         void deleteRow();
 
         /// <summary>
+        /// This is used to sort the specified table based on column passed as parameter
+        /// </summary>
+        /// <parameter>Type == "string" Name == "tableId"</parameter>
+        /// <parameter>Type == "string" Name == "coulumn"</parameter>
+        /// <returns></returns>
+        void sortTableByColumn(string tableId,string column);
+
+        /// <summary>
         /// This is used to get data for the specified table
         /// </summary>
         /// <parameter>Type == "string" Name == "tableId"</parameter>
