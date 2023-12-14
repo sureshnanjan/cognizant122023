@@ -7,21 +7,42 @@ using System.Threading.Tasks;
 
 namespace HerokuAppOperations
 {
+    /// <summary>
+    /// This interface is intended for the Sorted Data Table subpage for HerokuApp website.
+    /// This will cover all the necessary operations and properties available on SortedDataTables sub page
+    /// </summary>
     public interface ISortedDataTables
     {
-        //Main heading for the Page
+        /// <summary>
+        /// This will be used to get the heading of the sub page
+        /// </summary>
+        /// <returns>The return value is a string as the heading of the sub page is alphanumeric</returns>
         string getHeading();
 
-        //Hyperlink in table for Edit
+        /// <summary>
+        /// This is used when edit hyperlink is clicked on table row
+        /// </summary>
+        /// <returns></returns>
         void editRow();
 
-        //Hyperlink in table for Delete
+        /// <summary>
+        /// This is used when delete hyperlink is clicked on table row
+        /// </summary>
+        /// <returns></returns>
         void deleteRow();
 
-        //Get Data for specified table
-        void getTableData(string table);
+        /// <summary>
+        /// This is used to get data for the specified table
+        /// </summary>
+        /// <parameter>Type == "string" Name == "tableId"</parameter>
+        /// <returns></returns>
+        void getTableData(string tableId);
 
-        //Get number of rows for specified table
-        int getRowCount(string table);
+        /// <summary>
+        /// This is used to get the total number of rows in specified table
+        /// </summary>
+        /// <parameter>Type == "string" Name == "tableId"</parameter>
+        /// <returns>Type == "int" Description == "Gets Total number of rows in table"</returns>
+        int getRowCount(string tableId);
     }
 }
