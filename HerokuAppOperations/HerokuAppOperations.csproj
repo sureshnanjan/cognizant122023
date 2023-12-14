@@ -10,11 +10,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>HerokuAppOperations</RootNamespace>
     <AssemblyName>HerokuAppOperations</AssemblyName>
-    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+ HerokuApp-Automation
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,6 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IAddRemoveElements.cs" />
+    <Compile Include="IDisapperingElements.cs" />
+    <Compile Include="IHomePageOperations.cs" />
+    <Compile Include="IRedeirectLinks.cs" />
     <Compile Include="IDOMChallengingOperation.cs" />
     <Compile Include="IHomePageOperations.cs" />
     <Compile Include="ISlowResources.cs" />
