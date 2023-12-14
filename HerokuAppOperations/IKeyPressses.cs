@@ -15,7 +15,7 @@ namespace HerokuAppOperations
         String getHeading();
 
         /// <summary>
-        /// get the input key 
+        /// after typing the key in the textbox,it will give what type of key you inputted. 
         /// </summary>
         /// <returns></returns>
         String getEnteredKeyText();

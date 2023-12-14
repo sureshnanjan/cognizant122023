@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace HerokuAppOperations
 {
     /// <summary> 
-    /// Interface for Dyanamic Loading Page
+    /// Interface for Dyanamic Loading Page and Example links available
     /// </summary>
     interface IDynamicLoading
     { 
@@ -16,26 +16,34 @@ namespace HerokuAppOperations
         /// </summary>
         /// <returns></returns>
         String getHeading();
+        
         /// <summary>
-        /// get result of Example1
+        ///get the text of Paragraph of Dynamic Loading main page
         /// </summary>
-        /// <returns></returns>
-        String getExample1Result();
+        String getParagrapghText();
         /// <summary>
-        /// get result of Example2
+        ///After clicking on Example1 link we will be redirected to new page.
         /// </summary>
-        /// <returns></returns>
-        String getExample2Result();
+        /// <returns>return the sub heading of example 1 page</returns>
+        String getExample1PageSubHeading();
+        /// <summary>
+        ///After clicking on Example2 link we will be redirected to new page.
+        /// </summary>
+        /// <returns>return the sub heading of example 2 page</returns>
+        String getExample2PageSubHeading();
 
         /// <summary>
-        /// peform action on example1
+        /// After clicking on start button on Example1 page it will load the text
         /// </summary>
+        ///<returns>return the text after loading it</returns>
         void DoExample1();
 
         /// <summary>
-        /// perform action on example2
+        /// After clicking on start button on Example2 page it will load the text
         /// </summary>
+        ///<returns>return the text after loading it</returns>
         void DoExample2();
+
         /// <summary>
         /// get fork me detials
         /// </summary>
