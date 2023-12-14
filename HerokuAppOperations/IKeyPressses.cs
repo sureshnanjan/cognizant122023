@@ -11,7 +11,7 @@ namespace HerokuAppOperations
         /// <summary>
         /// get heading of Key Presses Loading page
         /// </summary>
-        /// <returns>Heading of Key Presses page</returns>
+        /// <returns></returns>
         String getHeading();
 
         /// <summary>

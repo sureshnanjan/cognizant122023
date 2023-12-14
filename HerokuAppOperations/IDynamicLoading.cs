@@ -17,18 +17,18 @@ namespace HerokuAppOperations
         /// <returns></returns>
         String getHeading();
         /// <summary>
-        /// get URL of Example1
+        /// get result of Example1
         /// </summary>
         /// <returns></returns>
         String getExample1Result();
         /// <summary>
-        /// get URL of Example2
+        /// get result of Example2
         /// </summary>
         /// <returns></returns>
         String getExample2Result();
 
         /// <summary>
-        /// pefrom action on example1
+        /// peform action on example1
         /// </summary>
         void DoExample1();
 
