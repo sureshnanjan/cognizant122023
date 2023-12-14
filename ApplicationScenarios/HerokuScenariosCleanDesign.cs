@@ -64,5 +64,23 @@ namespace ApplicationScenarios
             int addedElements = page.getAddedElemenstCount();
             Assert.That(addedElements, Is.EqualTo(5));
         }
+
+        [Test]
+        public void HerokuAppCheckBox1ElementCheck()
+        {
+            ICheckboxCheckUncheck page = new CheckBoxStatus();
+            bool box1Check = page.isBox1Checked();
+            Assert.That(box1Check, Is.EqualTo(false));
+            //bool box2Check = page.isBox2Checked();
+            //Assert.That(box2Check, Is.EqualTo(true));
+        }
+
+        [Test]
+        public void HerokuAppCheckBox2ElementCheck()
+        {
+            ICheckboxCheckUncheck page = new CheckBoxStatus();
+            bool box2Check = page.isBox2Checked();
+            Assert.That(box2Check, Is.EqualTo(true));            
+        }
     }
 }

@@ -30,8 +30,8 @@ namespace CognizantSeleniumTraining
             objectReturned.GoToUrl("https://the-internet.herokuapp.com/");
             // close the browser
             // Take a Screen Shot
-            ITakesScreenshot mycamera = broswer as ITakesScreenshot;
-            mycamera.GetScreenshot();
+            //ITakesScreenshot mycamera = broswer as ITakesScreenshot;
+           // mycamera.GetScreenshot();
             IJavaScriptExecutor myscrriptengine = broswer as IJavaScriptExecutor;
             myscrriptengine.ExecuteScript("alert('This Message')");
             OpenBrowser(BrowserTypes.chrome);
