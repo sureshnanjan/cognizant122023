@@ -6,12 +6,22 @@ using System.Threading.Tasks;
 
 namespace HerokuAppOperations
 {
-    //This interface is created for Heroko operations to perform validations checks on check box.
+    ///<summery> 
+    ///This interface is created for Heroko operations to perform validations checks on check box.
+    ///</summery>
+
     public interface ICheckboxCheckUncheck
     {
-        //This method is to check the first check box status
+        ///<summery>
+        ///This method is to check the first check box status
+        ///</summery>
+        ///<returns></returns>
         bool isBox1Checked();
-        //This method is to check the second check box status
+
+        ///<summery>
+        ///This method is to check the second check box status
+        ///</summery>
+        ///<returns></returns>
         bool isBox2Checked();        
     }
 }
