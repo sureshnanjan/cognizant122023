@@ -8,31 +8,58 @@ namespace HerokuAppOperations
 {
    public interface IDOMChallengingOperation
     {
-        //Get Sub Heading present in screen
+
+        /// <summary>
+        /// Get Sub Heading present in screen
+        /// </summary>
+        /// <returns></returns>
         string getSubHeading();
 
-        //Get description present in the screen
+        /// <summary>
+        /// Get description present in the screen
+        /// </summary>
+        /// <returns></returns>
         string getDescription();
 
-        //Get Button Text on click
+        /// <summary>
+        ///Get Button Text on click
+        /// </summary>
         void getButtondescription();
 
-        //Get Answer on button click
+        /// <summary>
+        /// Get Answer on button click
+        /// </summary>
         void getAnswer();
 
-        //Get total buttons count
+        /// <summary>
+        /// Get total buttons count
+        /// </summary>
         void getButtonCount();
 
-        //Get all table elements 
+        /// <summary>
+        /// Get all table elements
+        /// </summary>
+        /// <returns></returns>
         string getTableElements();
 
-        //Get all table Row count
+        /// <summary>
+        /// Get all table Row count
+        /// </summary>
+        /// <returns>
+        /// It returns table elements in string format
+        /// </returns>
         string getTableRowCount();
 
-        //Perform edit of table element
+        /// <summary>
+        /// Perform edit of table element
+        /// </summary>
+        /// <param name="rowId"></param>
         void EditRow(int rowId);
 
-        //Perform Delete of table element
+        /// <summary>
+        /// Perform Delete of table element
+        /// </summary>
+        /// <param name="rowId"></param>
         void HyperlinkDelete(int rowId);
 
     }
