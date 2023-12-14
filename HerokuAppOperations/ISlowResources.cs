@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HerokuAppOperations
 {
+    /// <summary>
+    ///  Interface for Slow Resources Screen
+    /// </summary>
    public interface ISlowResources
     {
         /// <summary>

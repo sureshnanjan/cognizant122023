@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HerokuAppOperations
 {
+    /// <summary>
+    /// Interface for DOM Challenging Screen
+    /// </summary>
    public interface IDOMChallengingOperation
     {
 
