@@ -21,14 +21,19 @@ namespace HerokuPages
             _browser.Navigate().GoToUrl(_url);
         }
         
-        public int getExamplesCount()
-        {
-            throw new NotImplementedException();
+        public int getExamplesCount() {
+                       
+            int excount = _browser.FindElements(By.XPath("//*[@id='content']/ul/li")).Count;
+            return excount;
         }
 
+        public IWebDriver browserobj()
+        {
+            return _browser;
+        }
         public string getForkmeDetails()
         {
-            throw new NotImplementedException();
+            return _browser.FindElement(By.XPath("/html/body/div[2]/a/img")).GetAttribute("alt");
         }
 
         public string getHeading()
@@ -53,6 +58,12 @@ namespace HerokuPages
         public void exitApplication()
         {
             CloseBrowser();
+        }
+        public int getAddedElemenstCount()
+        {
+            return _browser.FindElements(By.XPath("//*[@id='elements']")).Count;
+
+            
         }
     }
 }

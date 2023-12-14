@@ -7,6 +7,7 @@ namespace ApplicationScenarios
     [TestFixture]
     class HerokuScenariosCleanDesign
     {
+        
         [Test]
         public void HomePageHas44Examples() {
             // AAA
@@ -42,7 +43,7 @@ namespace ApplicationScenarios
 
         [Test]
         public void HerokuAppAddingOneElementWorks() {
-            IAddRemoveElements page = null;
+            IAddRemoveElements page = new AddRemoveElementsPage();
             page.addElement();
             int addedElements = page.getAddedElemenstCount();
             Assert.That(addedElements, Is.EqualTo(1));
@@ -51,10 +52,10 @@ namespace ApplicationScenarios
         [Test]
         public void HerokuAppAddingFiveElementWorks()
         {
-            IAddRemoveElements page = null;
+            IAddRemoveElements page = new AddRemoveElementsPage();
             for (int i = 0; i < 5; i++)
             {
-                page.addElement();
+    //                page.addElement();
             }
             int addedElements = page.getAddedElemenstCount();
             Assert.That(addedElements, Is.EqualTo(5));

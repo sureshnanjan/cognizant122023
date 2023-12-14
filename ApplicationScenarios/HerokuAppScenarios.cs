@@ -9,11 +9,13 @@ using OpenQA.Selenium;
 
 namespace ApplicationScenarios
 {
+   
     [TestFixture]
     class HerokuAppScenarios
     {
         [Test]
-        public void HomePageHas44Examples() {
+       
+        public void HomePageHas44Examples(int a) {
             IWebDriver browser = new ChromeDriver();
             browser.Navigate().GoToUrl("https://the-internet.herokuapp.com/");
             //int exampleCount = browser.FindElements(By.TagName("a")).Count;
