@@ -12,16 +12,20 @@ namespace HerokuAppOperations
    public interface ISlowResources
     {
         /// <summary>
-        /// Get Sub Heading present in screen
+        /// Get Sub Heading present in screen.
         /// </summary>
-        /// <returns> return sub heading on the page</returns>
+        /// <returns> returns sub heading content on the page</returns>
         string getSubHeading();
+
+
 
         /// <summary>
         /// Get Description present in screen
         /// </summary>
-        /// <returns>return description</returns>
+        /// <returns>return description present in screen</returns>
         string getDescription();
+
+
 
         /// <summary>
         /// Get Load Time
