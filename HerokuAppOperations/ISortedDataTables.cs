@@ -11,8 +11,6 @@ namespace HerokuAppOperations
     {
         //Main heading for the Page
         string getHeading();
- 
-        void goToExample(string exampleName);
 
         //Hyperlink in table for Edit
         void editRow();
