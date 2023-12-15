@@ -14,25 +14,37 @@ namespace HerokuPages
         private string _url = "https://the-internet.herokuapp.com/";
         private By headingLocator = By.TagName("h1");
         private By subHeadingLocator = By.TagName("h2");
+        private By logoIdentifier;
+
+        private By getAutomationLocator(string autoId) {
+
+            return By.XPath(autoId);
+        }
 
         public HomePage()
         {
+            //string toofactory = new ToolFact().getTool();
+            //string brname = new BrowserFactory().getBrowser();
             _browser = new ChromeDriver();
             _browser.Navigate().GoToUrl(_url);
+            logoIdentifier = getAutomationLocator("");
         }
         
         public int getExamplesCount()
         {
-            throw new NotImplementedException();
+            return _browser.FindElements(By.XPath("//*[@id='content']/ul/li")).Count;
         }
 
         public string getForkmeDetails()
         {
-            throw new NotImplementedException();
+            IWebElement firkme = _browser.FindElement(By.XPath("/html/body/div[2]/a/img"));
+            return firkme.GetAttribute("alt");
+            
         }
 
         public string getHeading()
         {
+            // Access the DB and get details 
             return _browser.FindElement(headingLocator).Text;
         }
 
@@ -53,6 +65,14 @@ namespace HerokuPages
         public void exitApplication()
         {
             CloseBrowser();
+        }
+    }
+
+    public class HomePageV1 : HomePage, IHomePageOperationsV1
+    {
+        public void newOperation()
+        {
+            throw new NotImplementedException();
         }
     }
 }

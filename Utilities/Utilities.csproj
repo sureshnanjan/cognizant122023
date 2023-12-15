@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5483BAD0-9D16-47D9-95A8-331F9B6EA223}</ProjectGuid>
+    <ProjectGuid>{D9AA5390-A862-4E4B-9DA3-B37E22F4B517}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HerokuAppOperations</RootNamespace>
-    <AssemblyName>HerokuAppOperations</AssemblyName>
+    <RootNamespace>Utilities</RootNamespace>
+    <AssemblyName>Utilities</AssemblyName>
     <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -21,7 +21,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\HerokuAppOperations.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -42,15 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IAddRemoveElements.cs" />
-    <Compile Include="IFileUpload.cs" />
-    <Compile Include="IFramesHandling.cs" />
-    <Compile Include="IGeoLocation.cs" />
-    <Compile Include="IHomePageOperations.cs" />
-    <Compile Include="IHorizantalSlider.cs" />
-    <Compile Include="IHovers.cs" />
-    <Compile Include="INestedFrames.cs" />
-    <Compile Include="ITinyEditor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

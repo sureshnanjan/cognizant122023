@@ -29,4 +29,13 @@ namespace HerokuAppOperations
 
         
     }
+    /// <summary>
+    /// 
+    /// </summary>
+    public interface IHomePageOperationsV1
+    {
+        void newOperation();
+
+
+    }
 }

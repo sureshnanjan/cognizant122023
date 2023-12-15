@@ -59,6 +59,10 @@
       <Project>{5483bad0-9d16-47d9-95a8-331f9b6ea223}</Project>
       <Name>HerokuAppOperations</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{d9aa5390-a862-4e4b-9da3-b37e22f4b517}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

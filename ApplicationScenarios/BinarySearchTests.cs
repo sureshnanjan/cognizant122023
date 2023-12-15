@@ -48,5 +48,23 @@ namespace ApplicationScenarios
             int actual = mysearcher.search();
             Assert.That(actual, Is.LessThan(0));
         }
+        /// <summary>
+        /// Test the binarysearch algorithm
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="searchTerm"></param>
+        /// <param name="expected"></param>
+        [TestCase(new int[]{1,2,3,4,5},10,5)]
+        [TestCase(new int[] { 1, 2, 3, 4, 5 }, 0, ~0)]
+        public void DoBinarySerchTests(int[] input, int searchTerm, int expected) {
+            BinarySearcher mysearcher = new BinarySearcher(input, searchTerm);
+            int actual = mysearcher.search();
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+
+        
     }
+
+
+
 }
