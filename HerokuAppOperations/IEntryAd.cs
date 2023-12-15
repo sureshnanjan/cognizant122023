@@ -24,6 +24,10 @@ namespace HerokuAppOperations
         /// Close Pop-up window on 'close' button click
         /// </summary>
         void closePopUp();
-
+        void enter();
+        bool checkAdExists(string title);
+        void closeAd();
+        void reload();
+        void reenableAd();
     }
 }

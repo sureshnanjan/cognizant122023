@@ -8,13 +8,14 @@ namespace ApplicationScenarios
     class HerokuScenariosCleanDesign
     {
         [Test]
-        public void HomePageHas44Examples() {
+        public void HomePageHas44Examples()
+        {
             // AAA
             IHomePageOperations page = new HomePage();
             // Act
             int nofoExamples = page.getExamplesCount();
             Assert.That(nofoExamples, Is.EqualTo(44));
-        
+
         }
 
         [Test]
@@ -41,7 +42,8 @@ namespace ApplicationScenarios
         }
 
         [Test]
-        public void HerokuAppAddingOneElementWorks() {
+        public void HerokuAppAddingOneElementWorks()
+        {
             IAddRemoveElements page = null;
             page.addElement();
             int addedElements = page.getAddedElemenstCount();
@@ -59,5 +61,53 @@ namespace ApplicationScenarios
             int addedElements = page.getAddedElemenstCount();
             Assert.That(addedElements, Is.EqualTo(5));
         }
+
+        [Test]
+        [Author("Tejaswini")]
+        [Category("AddEntry")]
+        public void HerokuAppLoadsAdOnEntry()
+        {
+            IEntryAd page = null;
+            page.enter();
+            bool adExists = page.checkAdExists("This is a modal window");
+
+            page.closeAd();
+            Assert.That(adExists, Is.True);
+
+        }
+
+        [Test]
+        [Author("Tejaswini")]
+        [Category("AddEntry")]
+        public void HerokuAppNoLoadOnReentry()
+        {
+            IEntryAd page = null;
+            page.enter();
+            page.closeAd();
+            page.reload();
+            bool adExists = page.checkAdExists("This is a modal window");
+            Assert.That(adExists, Is.False);
+        }
+
+        [Test]
+        [Author("Tejaswini")]
+        [Category("AddEntry")]
+        public void HerokuAppReenablingAdLoadDisplaysAd()
+        {
+            //Arrange
+            IEntryAd page = null;
+            page.enter();
+            page.closeAd();
+            page.reload();
+            //Action
+            page.reenableAd();
+            page.reload();
+            //Assertion
+            bool adExists = page.checkAdExists("This is a modal window");
+            Assert.That(adExists, Is.True);
+
+        }
+
+        //validate Title
     }
 }
