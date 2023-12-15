@@ -64,7 +64,7 @@ namespace ApplicationScenarios
 
         [Test]
         [Author("Tejaswini")]
-        [Category("AddEntry")]
+        [Category("AdEntry")]
         public void HerokuAppLoadsAdOnEntry()
         {
             IEntryAd page = null;
@@ -78,7 +78,7 @@ namespace ApplicationScenarios
 
         [Test]
         [Author("Tejaswini")]
-        [Category("AddEntry")]
+        [Category("AdEntry")]
         public void HerokuAppNoLoadOnReentry()
         {
             IEntryAd page = null;
@@ -91,7 +91,7 @@ namespace ApplicationScenarios
 
         [Test]
         [Author("Tejaswini")]
-        [Category("AddEntry")]
+        [Category("AdEntry")]
         public void HerokuAppReenablingAdLoadDisplaysAd()
         {
             //Arrange
