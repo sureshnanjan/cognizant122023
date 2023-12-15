@@ -61,6 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinarySearchTests.cs" />
+    <Compile Include="HerokuAddRemoveButtonScenarios.cs" />
+    <Compile Include="HerokuBasicAuthScenarios.cs" />
+    <Compile Include="HerokuShiftContentScenarios.cs" />
     <Compile Include="HerokuAppScenarios.cs" />
     <Compile Include="HerokuScenariosCleanDesign.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
