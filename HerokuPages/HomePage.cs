@@ -8,51 +8,33 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 namespace HerokuPages
 {
-    public class HomePage : IHomePageOperations
+    public class HomePage : HerokuApplication, IHomePageOperations
     {
-        private IWebDriver _browser;
-        private string _url = "https://the-internet.herokuapp.com/";
-        private By headingLocator = By.TagName("h1");
-        private By subHeadingLocator = By.TagName("h2");
 
-        public HomePage()
+        private By examplesLocator;
+        //private By subHeadingLocator;
+
+        public HomePage(IWebDriver driver) : base(driver)
         {
-            _browser = new ChromeDriver();
-            _browser.Navigate().GoToUrl(_url);
+            examplesLocator = By.XPath("//*[@id='content']/ul/li/a");
         }
-        
+
         public int getExamplesCount()
         {
-            throw new NotImplementedException();
+            return _browser.FindElements(examplesLocator).Count();
         }
 
-        public string getForkmeDetails()
+        IHerokuApp IHomePageOperations.goToExample(string exampleName)
         {
-            throw new NotImplementedException();
-        }
+            _browser.FindElement(By.LinkText(exampleName)).Click();
+            switch (exampleName.Trim().ToLower())
+            {
+                case "add/remove elements":
+                    return new AddRemoveElements(_browser);
+                default:
+                    return this;
 
-        public string getHeading()
-        {
-            return _browser.FindElement(headingLocator).Text;
-        }
-
-        public string getSubHeading()
-        {
-            return _browser.FindElement(subHeadingLocator).Text;
-        }
-
-        public void goToExample(string exampleName)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void CloseBrowser() {
-            _browser.Quit();
-        }
-
-        public void exitApplication()
-        {
-            CloseBrowser();
+            }
         }
     }
 }

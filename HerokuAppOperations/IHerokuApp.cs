@@ -7,23 +7,21 @@ using System.Threading.Tasks;
 namespace HerokuAppOperations
 {
     /// <summary>
-    /// This interface captures all the operation possible on the Heroku Home Page
+    /// 
     /// </summary>
-    public interface IHomePageOperations
+    public interface IHerokuApp: IProjectPageOperations, IFooterPageOperations, IHerokuAppErrorHandler, IAppFactory, IHeadingOperations
     {
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="exampleName"></param>
         /// <returns></returns>
-        IHerokuApp goToExample(string exampleName);
+        IHerokuApp goToHome();
 
         /// <summary>
         /// 
         /// </summary>
-        /// <returns></returns>
-        int getExamplesCount();
-        
-        
+        void exitApplication();
+
+
     }
 }

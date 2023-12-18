@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HerokuPagesWebdriverImpl", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HerokuAppOperations", "HerokuAppOperations\HerokuAppOperations.csproj", "{5483BAD0-9D16-47D9-95A8-331F9B6EA223}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestfulBookerOperations", "RestfulBookerOperations\RestfulBookerOperations.csproj", "{0C01D9AF-0B38-4264-A166-96C0EB0EBE8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestfulBookerRSImpl", "RestfulBookerRSImpl\RestfulBookerRSImpl.csproj", "{80F1C95B-8FB8-46C0-8064-62619B18FE42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{5483BAD0-9D16-47D9-95A8-331F9B6EA223}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5483BAD0-9D16-47D9-95A8-331F9B6EA223}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5483BAD0-9D16-47D9-95A8-331F9B6EA223}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C01D9AF-0B38-4264-A166-96C0EB0EBE8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C01D9AF-0B38-4264-A166-96C0EB0EBE8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C01D9AF-0B38-4264-A166-96C0EB0EBE8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C01D9AF-0B38-4264-A166-96C0EB0EBE8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80F1C95B-8FB8-46C0-8064-62619B18FE42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80F1C95B-8FB8-46C0-8064-62619B18FE42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80F1C95B-8FB8-46C0-8064-62619B18FE42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80F1C95B-8FB8-46C0-8064-62619B18FE42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

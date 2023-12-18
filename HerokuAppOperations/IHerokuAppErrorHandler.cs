@@ -7,23 +7,19 @@ using System.Threading.Tasks;
 namespace HerokuAppOperations
 {
     /// <summary>
-    /// This interface captures all the operation possible on the Heroku Home Page
+    ///  Handles the errors during application operation
     /// </summary>
-    public interface IHomePageOperations
+    public interface IHerokuAppErrorHandler
     {
         /// <summary>
-        /// 
+        /// Checks whether the current state is in Error
         /// </summary>
-        /// <param name="exampleName"></param>
         /// <returns></returns>
-        IHerokuApp goToExample(string exampleName);
+        bool checkStatus();
 
         /// <summary>
         /// 
         /// </summary>
-        /// <returns></returns>
-        int getExamplesCount();
-        
-        
+        void handleErrors();
     }
 }

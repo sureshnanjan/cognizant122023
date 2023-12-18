@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5483BAD0-9D16-47D9-95A8-331F9B6EA223}</ProjectGuid>
+    <ProjectGuid>{0C01D9AF-0B38-4264-A166-96C0EB0EBE8D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HerokuAppOperations</RootNamespace>
-    <AssemblyName>HerokuAppOperations</AssemblyName>
+    <RootNamespace>RestfulBookerOperations</RootNamespace>
+    <AssemblyName>RestfulBookerOperations</AssemblyName>
     <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -21,7 +21,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\HerokuAppOperations.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,14 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IAddRemoveElements.cs" />
-    <Compile Include="IAppFactory.cs" />
-    <Compile Include="IHeadingOperations.cs" />
-    <Compile Include="IHerokuApp.cs" />
-    <Compile Include="IFooterPageOperations.cs" />
-    <Compile Include="IHerokuAppErrorHandler.cs" />
-    <Compile Include="IHomePageOperations.cs" />
-    <Compile Include="IProjectPageOperations.cs" />
+    <Compile Include="APIApplicationFactory.cs" />
+    <Compile Include="Booking.cs" />
+    <Compile Include="BookingDatesInfo.cs" />
+    <Compile Include="APIAutomationConfiguration.cs" />
+    <Compile Include="IRestfulBookerOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -8,15 +8,24 @@ namespace ApplicationScenarios
     class HerokuScenariosCleanDesign
     {
         private int myvar;
+        private IHerokuApp app;
+        private IHomePageOperations homePage;
+        [OneTimeSetUp]
+        public void InitializeApplication() {
+            app = new HerokuApplication().getApplicationInstance();
+            
+        }
+
+        [SetUp]
+        public void beforeEachTest() {
+            homePage = app.goToHome() as IHomePageOperations;
+        }
+
         [Test]
         public void HomePageHas44Examples() {
 
-            int unused = 0;
-            this.myvar = 100;
             // AAA
-            IHomePageOperations page = new HomePage();
-            // Act
-            int nofoExamples = page.getExamplesCount();
+            int nofoExamples = homePage.getExamplesCount();
             Assert.That(nofoExamples, Is.EqualTo(44));
         
         }
@@ -24,45 +33,49 @@ namespace ApplicationScenarios
         [Test]
         public void HomePageHasCorrectHeadingText()
         {
-            
-            // AAA
-            IHomePageOperations page = new HomePage();
-            // Act
-            string headingString = page.getHeading();
+            string headingString = app.getHeading();
             Assert.That(headingString, Is.EqualTo("Welcome to the-internet"));
-            page.exitApplication();
-
+            
         }
 
         [Test]
         public void HomePageHasCorrectSubHeadingText()
         {
-            // AAA
-            IHomePageOperations page = new HomePage();
-            // Act
-            string subHeading = page.getSubHeading();
+            string subHeading = app.getSubHeading();
             Assert.That(subHeading, Is.EqualTo("Available Examples"));
 
         }
 
         [Test]
         public void HerokuAppAddingOneElementWorks() {
-            IAddRemoveElements page = null;
-            page.addElement();
-            int addedElements = page.getAddedElemenstCount();
-            Assert.That(addedElements, Is.EqualTo(1));
+            var adrpage = homePage.goToExample("Add/Remove Elements") as IAddRemoveElements;
+            adrpage.addElement();
+            int available = adrpage.getAddedElemenstCount();
+            Assert.That(available, Is.EqualTo(1));
+            
         }
 
         [Test]
         public void HerokuAppAddingFiveElementWorks()
         {
-            IAddRemoveElements page = null;
+
+            var adrpage = homePage.goToExample("Add/Remove Elements") as IAddRemoveElements;
             for (int i = 0; i < 5; i++)
             {
-                page.addElement();
+                adrpage.addElement();
             }
-            int addedElements = page.getAddedElemenstCount();
+            int addedElements = adrpage.getAddedElemenstCount();
             Assert.That(addedElements, Is.EqualTo(5));
+        }
+
+        [Test]
+        public void CheckNewDesignWorks() {
+
+            Assert.That(app.getHeading(), Is.EqualTo("The Internet"));
+            
+
+
+
         }
     }
 }
