@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 using HerokuAppOperations;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
+
 namespace HerokuPages
 {
-    public class HomePage : IHomePageOperations
+    public class HomePage : IHomePageOperations,IContextMenu
     {
         private IWebDriver _browser;
         private string _url = "https://the-internet.herokuapp.com/";
@@ -48,6 +50,27 @@ namespace HerokuPages
 
         private void CloseBrowser() {
             _browser.Quit();
+        }
+        public void clickonpagelink()
+        {
+            _browser.FindElement(By.LinkText("Context Menu")).Click();
+        }
+        public string getHeadingOnClick()
+        {
+            //string heading = string.Empty;
+            _browser = new ChromeDriver();
+            By heading = By.TagName("h3");
+            return _browser.FindElement(heading).Text;
+        }
+       public string GetBoxclicknalrt()
+        {
+            string str = string.Empty;
+            Actions actions = new Actions(_browser);
+            By heading = By.TagName("hot-spot");
+            WebElement clickable =(WebElement)_browser.FindElement(heading);
+            actions.ContextClick(clickable);
+            str = _browser.SwitchTo().Alert().Text;
+            return str;
         }
 
         public void exitApplication()

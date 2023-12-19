@@ -1,6 +1,7 @@
 ﻿using HerokuAppOperations;
 using NUnit.Framework;
 using HerokuPages;
+using OpenQA.Selenium.Interactions;
 
 namespace ApplicationScenarios
 {
@@ -59,5 +60,24 @@ namespace ApplicationScenarios
             int addedElements = page.getAddedElemenstCount();
             Assert.That(addedElements, Is.EqualTo(5));
         }
+
+        [Test]
+        [Category("ContextMenu")]
+        [Author("Sonali")]
+        public void ContextMenuHasCorrectHeadingText()
+        {
+            // AAA
+            IContextMenu page = null;
+            // Act
+            page.clickonpagelink();
+            string contextHeading = page.getHeadingOnClick();
+            //Assert
+            Assert.That(contextHeading, Is.EqualTo("Context Menu"));
+            string alertHeading = page.GetBoxclicknalrt();
+            Assert.That(contextHeading, Is.EqualTo("You selected a context menu"));
+
+        }
+        
+
     }
 }
