@@ -11,8 +11,7 @@ namespace RestfulBookerOperations
     {
         public static APIAutomationConfiguration getAPIEndPointParams() {
             var setting = readAppSettings();
-            return new APIAutomationConfiguration(setting.url.Trim().EndsWith("/") ? setting.url.Trim() : setting.url.Trim().Append('/').ToString(),
-                setting.port);
+            return new APIAutomationConfiguration(setting.url.Trim(),setting.port.Trim());
             
         }
 
@@ -30,6 +29,12 @@ namespace RestfulBookerOperations
             }
             
         
+        }
+
+        public static IRestfulBookerOperations getApplication()
+        {
+            APIAutomationConfiguration config = getAPIEndPointParams();
+            throw new NotImplementedException();
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RestfulBookerOperations
 {
-    class Booking
+    public class Booking
     {
         private string firstname;
         private string lastname;

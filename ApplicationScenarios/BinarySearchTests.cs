@@ -48,5 +48,27 @@ namespace ApplicationScenarios
             int actual = mysearcher.search();
             Assert.That(actual, Is.LessThan(0));
         }
+
+        [Test]
+        [TestCaseSource("getBinarySearchTestData")]
+        public void TestBinarySearch(BinarySearchDataRecord data)
+        {
+
+            BinarySearcher mysearcher = new BinarySearcher(data.Inputs, data.Search);
+
+            Assert.That(mysearcher.search(), Is.EqualTo(data.Expected));
+
+        }
+
+        private static BinarySearchDataRecord[] getBinarySearchTestData()
+        {
+            return new BinarySearchDataRecord[]{ new BinarySearchDataRecord(new int[]{ 1,2,3,4,5}, 5, 4),
+                new BinarySearchDataRecord(new int[]{ 10,20,30,40,50}, 5, 4)
+
+            };
+        }
+
+
     }
 }
+

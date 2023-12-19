@@ -1,5 +1,7 @@
 ﻿using RestfulBookerOperations;
 using NUnit.Framework;
+using System.Threading.Tasks;
+using RestfulBookerRSImpl;
 namespace ApplicationScenarios
 {
     /// <summary>
@@ -24,7 +26,14 @@ namespace ApplicationScenarios
         /// 
         /// </summary>
         [Test]
-        public void authenticationRequestReturnsToken() { }
+        public async Task authenticationRequestReturnsToken() {
+            //IRestfulBookerOperations apiOps = APIApplicationFactory.getApplication();
+            IRestfulBookerOperations apiOps = new RestfulBookerRSApp();
+            string token = await apiOps.createToken("admin", "password123");
+            Assert.That(token.Length, Is.GreaterThan(5));
+
+
+        }
 
         /// <summary>
         /// The Test to read the app settings are working OK. The API end points are set in the App.config file under the  

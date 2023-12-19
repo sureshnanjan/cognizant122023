@@ -14,7 +14,7 @@ namespace RestfulBookerOperations
         /// <param name="uname"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        string createToken(string uname, string password);
+        Task<string> createToken(string uname, string password);
         /// <summary>
         /// Returns the ids of all the bookings that exist within the API. Can take optional query strings to search and return a subset of booking ids.
         /// </summary>
@@ -23,13 +23,13 @@ namespace RestfulBookerOperations
         /// <param name="checkin">Return bookings that have a checkin date greater than or equal to the set checkin date. Format must be CCYY-MM-DD</param>
         /// <param name="checkout">Return bookings that have a checkout date greater than or equal to the set checkout date. Format must be CCYY-MM-DD</param>
         /// <returns></returns>
-        string[] GetBookingIds(string fname, string lname, string checkin, string checkout);
+        Task<string[]> GetBookingIds(string fname, string lname, string checkin, string checkout);
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        string GetBooking(string id);
+        Task<Booking> GetBooking(string id);
     }
 }

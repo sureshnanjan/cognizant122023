@@ -10,6 +10,7 @@ namespace ApplicationScenarios
         private int myvar;
         private IHerokuApp app;
         private IHomePageOperations homePage;
+        
         [OneTimeSetUp]
         public void InitializeApplication() {
             app = new HerokuApplication().getApplicationInstance();

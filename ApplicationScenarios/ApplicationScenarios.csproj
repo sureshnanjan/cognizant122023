@@ -59,6 +59,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BinarySearchDataRecord.cs" />
     <Compile Include="BinarySearchTests.cs" />
     <Compile Include="HerokuAppScenarios.cs" />
     <Compile Include="HerokuScenariosCleanDesign.cs" />

@@ -102,6 +102,7 @@ namespace HerokuPages
 
         public string getSubHeading()
         {
+           //this._browser.Manage().Window.
             return this._browser.FindElement(subHeadingLocator).Text;
         }
     }

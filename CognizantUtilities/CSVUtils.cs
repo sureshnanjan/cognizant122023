@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RestfulBookerOperations
+namespace CognizantUtilities
 {
-    public class BookingDatesInfo
+    public class CSVUtils
     {
     }
 }
