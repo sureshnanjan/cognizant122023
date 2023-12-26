@@ -73,10 +73,47 @@ namespace ApplicationScenarios
         public void CheckNewDesignWorks() {
 
             Assert.That(app.getHeading(), Is.EqualTo("The Internet"));
-            
-
-
-
         }
+
+        [Test]
+        [Author("Karthik")]
+        [Category("Statuscode")]
+        public void StatusCodeHasCorrectHeadingText()
+        {
+            var statuscodepage = homePage.goToExample("Status Codes") as IStatus_Codes;                       
+            string statuscodeHeading = statuscodepage.getHeading();
+            Assert.That(statuscodeHeading, Is.EqualTo("Status Codes"));
+        }
+
+        [Test]
+        [Author("Karthik")]
+        [Category("StatusCode")]
+        public void StatusCodegetStatusCodesCount()
+        {
+            var statuscodePage = homePage.goToExample("Status Codes") as IStatus_Codes;
+            int statuscodecount = statuscodePage.getStatusCodesCount();
+            Assert.That(statuscodecount, Is.EqualTo(4));
+        }
+
+        [Test]
+        [Author("Karthik")]
+        [Category("StatusCode")]
+        public void StatusCodegoToStatusCodes()
+        {
+            var statuscodePage = homePage.goToExample("Status Codes") as IStatus_Codes;
+            statuscodePage.goToStatusCodes("200");
+        }
+
+        
+        [Test]
+        [Author("Karthik")]
+        [Category("StatusCode")]
+        public void ScodegoToStatusCodeCompleteList()
+        {
+            var statuscodePage = homePage.goToExample("Status Codes") as IStatus_Codes;
+            statuscodePage.goToStatusCodes("200");
+            statuscodePage.goToStatusCodeCompleteList();
+        }
+
     }
 }
