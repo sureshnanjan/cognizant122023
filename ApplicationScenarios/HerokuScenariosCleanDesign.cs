@@ -55,6 +55,15 @@ namespace ApplicationScenarios
             Assert.That(available, Is.EqualTo(1));
             
         }
+        [Test]
+        public void HerokuAppFrames()
+        {
+            var adrpage = homePage.goToExample("Frames") as IFrames;
+            string heading=adrpage.getheading();
+                       
+            Assert.That(heading, Is.EqualTo("Frames"));
+
+        }
 
         [Test]
         public void HerokuAppAddingFiveElementWorks()

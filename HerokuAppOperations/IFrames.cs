@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HerokuAppOperations
 {
-    interface IFrames : IFrameoperations,INestedFrame
+   public interface IFrames
     {/// <summary>
      /// this  getheading() method used to get the heading "Frames" and it will checks the condition Equalto
      /// </summary>

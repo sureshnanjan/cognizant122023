@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HerokuAppOperations
 {
-    interface INestedFrame
+    public interface INestedFrame
     {
         /// <summary>
         /// This method getFrameCounts() used to get the total number of frames in the Nested Frame

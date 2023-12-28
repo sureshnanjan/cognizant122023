@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HerokuAppOperations
 {
-    interface IFrameoperations
+    public interface IFrameoperations
     {
         /// <summary>
         /// This method  undoOperation() undoes the operations in the eiditor window
