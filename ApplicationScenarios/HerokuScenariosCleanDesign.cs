@@ -73,10 +73,57 @@ namespace ApplicationScenarios
         public void CheckNewDesignWorks() {
 
             Assert.That(app.getHeading(), Is.EqualTo("The Internet"));
-            
+
+        }
 
 
+        ///<summary>
+        /// This test verifies the correct heading 
+        ///</summary>
+       [Test]
+       [Category("Slow Resources")]
+       [Author("Arnab")]
+       public void SlowResourcesHasCorrectHeadingText()
+        {
+            string headingString = app.getHeading();
+            Assert.That(headingString, Is.EqualTo("Slow Resources"));
+        }
 
+        /// <summary>
+        /// To verify Loading Time in 2G Network
+        /// </summary>
+        [Test]
+        public void SlowResourcesWith2GNwetwork()
+        {
+            //Arrange
+            ISlowResources page = null;
+
+            // Setup Network to 2g
+            int expectedTime = 30;
+
+            page.Load();
+
+            int actualLoadTime = page.getLoadTime();
+
+            Assert.That(actualLoadTime, Is.LessThanOrEqualTo(expectedTime));
+        }
+        /// <summary>
+        /// To verify Loading Time in 3G Network
+        /// </summary>
+        [Test]
+        public void SlowResourcesWith3GNwetwork()
+        {
+            //Arrange
+            ISlowResources page = null;
+
+            // Setup Network to 3g
+            int expectedTime = 10;
+
+            page.Load();
+
+            int actualLoadTime = page.getLoadTime();
+
+            Assert.That(actualLoadTime, Is.LessThanOrEqualTo(expectedTime));
         }
     }
 }
